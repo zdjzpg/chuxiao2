@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>处理表单</title>
+</head>
+
+<body>
+  <div>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <img src="./4-1.png" alt="" class="active">
+  <img src="./4-2.png" alt="">
+  <img src="./4-3.png" alt="">
+  <script>
+    const arr = [...document.querySelectorAll('span')]
+    arr.forEach((item, index) => {
+      item.addEventListener('click', () => {
+        document.querySelector(`.active`).className = ''
+        document.querySelector(`img:nth-of-type(${index + 1})`).className = 'active'
+      })
+    })
+  </script>
+</body>
+<style>
+  body,
+  html {
+    padding: 0;
+    margin: 0;
+  }
+
+  div {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+  }
+
+  span {
+    width: 33%;
+    background: transparent;
+    flex: 1;
+  }
+
+  img {
+    width: 100vw;
+    display: none;
+  }
+
+  .active {
+    display: block;
+  }
+</style>
+
+</html>

@@ -1,15 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>东大信息化</title>
 </head>
-
 <body>
-  11111ces
+  <img src="./img/1.png" alt="" class="first">
+  <img src="./img/2.png" alt="" class="sec">
+  <script>
+    document.querySelector('.first').addEventListener('click',function(){
+      document.querySelector('.sec').style.display='block'
+      document.querySelector('.first').style.display='none'
+    })
+    document.querySelector('.sec').addEventListener('click',function(){
+      document.querySelector('.first').style.display='block'
+      document.querySelector('.sec').style.display='none'
+    })
+  </script>
+  <style>
+    body,html{
+      padding: 0;
+      margin: 0;
+    }
+    .first{
+      width: 100vw;
+      height: 100vh;
+    }
+    .sec{
+      width: 100vw;
+      display: none;
+    }
+  </style>
 </body>
-
 </html>
